@@ -9,14 +9,14 @@ class ImageContainer extends StatelessWidget {
   final double height;
   final String image;
 
-  ImageContainer({this.width, this.height, this.child, this.color = Colors.yellow, this.radius, this.image});
+  ImageContainer({this.width, this.height, this.child, this.color = Colors.white, this.radius, this.image});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width.w,
       height: height.h,
-      alignment: Alignment.center,
+      alignment: Alignment.topLeft,
       child: child,
       decoration: BoxDecoration(
         image: DecorationImage(

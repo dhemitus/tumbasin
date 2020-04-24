@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
-import 'package:flutter_playground_kodingworks/shared/colors.dart' as AppColor;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CategoryButton extends StatelessWidget {
+class TabButton extends StatelessWidget {
   final Function onTap;
   final String text;
-  final String image;
+  final Widget icon;
+  final Color color;
 
-  CategoryButton({this.onTap, this.text = '', this.image});
+  TabButton({this.onTap, this.text = '', this.icon, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class CategoryButton extends StatelessWidget {
       onTap: () => onTap(context),
       child: Column(
         children: <Widget>[
-          ButtonContainer(
+/*          ButtonContainer(
             radius: BorderRadius.circular(10.0.w),
             height: 64.0,
             width: 60.0,
@@ -26,8 +26,12 @@ class CategoryButton extends StatelessWidget {
               height: 36.0,
               fit: BoxFit.fitHeight,
             )
-          ),
-          Button1Text(text, color: AppColor.grey,)
+          ),*/
+          icon,
+          Padding(
+            padding: EdgeInsets.only(top: 6.0.w),
+            child: Button1Text(text, color: color,),
+          )
         ],
       ),
     );

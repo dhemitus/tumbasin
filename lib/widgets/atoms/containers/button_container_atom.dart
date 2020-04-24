@@ -10,7 +10,7 @@ class ButtonContainer extends StatelessWidget {
   final double width;
   final double height;
 
-  ButtonContainer({this.width, this.height, this.child, this.color = Colors.yellow, this.radius, this.blur = 0.0, this.offset});
+  ButtonContainer({this.width, this.height, this.child, this.color = Colors.white, this.radius, this.blur = 0.0, this.offset});
 
   @override
   Widget build(BuildContext context) {
