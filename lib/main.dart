@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_playground_kodingworks/widgets/molecules/molecules.dart';
+import 'package:flutter_playground_kodingworks/widgets/widgets.dart';
 import 'package:flutter_playground_kodingworks/shared/assets.dart' as AppAsset;
 import 'package:flutter_playground_kodingworks/shared/colors.dart' as AppColor;
 
@@ -47,10 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            HeaderCard(),
             Subtitle1Text('You have pushed the button this many times:'),
             H5Text('$_counter'),
             TabButton(icon: AppAsset.home, text: 'Belanja', color: AppColor.primarysecond,),
-            PrimaryButton(text: 'GANTI',),
             SecondaryButton(text: 'Tambahkan',),
             CategoryButton(text: 'Sayuran', image: 'https://picsum.photos/250?image=9',),
             LineContainer(),
@@ -61,8 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
+        backgroundColor: AppColor.secondary,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: AppAsset.trolley,
       ),
     );
   }

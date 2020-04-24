@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
+import 'package:flutter_playground_kodingworks/widgets/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TabButton extends StatelessWidget {
@@ -16,17 +16,6 @@ class TabButton extends StatelessWidget {
       onTap: () => onTap(context),
       child: Column(
         children: <Widget>[
-/*          ButtonContainer(
-            radius: BorderRadius.circular(10.0.w),
-            height: 64.0,
-            width: 60.0,
-            color: AppColor.primarythird.withOpacity(0.1),
-            child: Image.network(
-              image,
-              height: 36.0,
-              fit: BoxFit.fitHeight,
-            )
-          ),*/
           icon,
           Padding(
             padding: EdgeInsets.only(top: 6.0.w),

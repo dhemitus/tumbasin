@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_playground_kodingworks/shared/colors.dart' as AppColor;
 
-class LineContainer extends StatelessWidget {
+class CardContainer extends StatelessWidget {
+  final Widget child;
   final Color color;
+  final BorderRadius radius;
   final double width;
   final double height;
+  final List<BoxShadow> shadow;
 
-  LineContainer({this.width, this.height = 1.0, this.color = AppColor.darkgrey});
+  CardContainer({this.width, this.height, this.child, this.color = Colors.white, this.radius, this.shadow});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width != null ? width.w : null,
       height: height.h,
+      alignment: Alignment.center,
+      child: child,
       decoration: BoxDecoration(
         color: color,
         shape: BoxShape.rectangle,
+        borderRadius: radius,
+        boxShadow: shadow
       ),
     );
   }

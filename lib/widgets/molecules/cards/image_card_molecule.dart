@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
-import 'package:flutter_playground_kodingworks/widgets/molecules/molecules.dart';
+import 'package:flutter_playground_kodingworks/widgets/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ImageCard extends StatelessWidget {
