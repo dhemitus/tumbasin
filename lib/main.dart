@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_playground_kodingworks/widgets/molecules/molecules.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,15 +41,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 360, height: 640, allowFontScaling: true);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Subtitle1Text('You have pushed the button this many times:'),
-            H5Text('$_counter')
+            H5Text('$_counter'),
+            PrimaryButton(text: 'GANTI',),
+            SecondaryButton(text: 'Tambahkan',),
+            CategoryButton(text: 'Sayuran',),
+            LineContainer(),
+            StikerDiscount(text: 'Disc 10%',)
           ],
         ),
       ),

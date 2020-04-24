@@ -6,7 +6,7 @@ class Subtitle2Text extends StatelessWidget {
   final String text;
   final TextAlign align;
   final Color color;
-  Subtitle2Text({Key key,this.align, this.text, this.color}) : super(key: key);
+  Subtitle2Text(this.text, {Key key,this.align, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Text(
@@ -17,7 +17,6 @@ class Subtitle2Text extends StatelessWidget {
       fontStyle: FontStyle.normal,
       letterSpacing: ScreenUtil().setSp(0.2),
       fontWeight: FontWeight.w600,
-      height: ScreenUtil().setSp(13.0),
     ),
     textAlign: align,
   );

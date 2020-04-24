@@ -17,7 +17,6 @@ class H5Text extends StatelessWidget {
       fontStyle: FontStyle.normal,
       letterSpacing: ScreenUtil().setSp(0.2),
       fontWeight: FontWeight.w600,
-      height: ScreenUtil().setSp(20.0),
     ),
     textAlign: align,
   );

@@ -17,7 +17,6 @@ class Subtitle1Text extends StatelessWidget {
       fontStyle: FontStyle.normal,
       letterSpacing: ScreenUtil().setSp(0.2),
       fontWeight: FontWeight.w500,
-      height: ScreenUtil().setSp(15.0),
     ),
     textAlign: align,
   );

@@ -6,7 +6,7 @@ class Button1Text extends StatelessWidget {
   final String text;
   final TextAlign align;
   final Color color;
-  Button1Text({Key key,this.align, this.text, this.color}) : super(key: key);
+  Button1Text(this.text, {Key key,this.align, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Text(
@@ -17,7 +17,6 @@ class Button1Text extends StatelessWidget {
       fontStyle: FontStyle.normal,
       letterSpacing: ScreenUtil().setSp(0.2),
       fontWeight: FontWeight.w600,
-      height: ScreenUtil().setSp(17.0),
     ),
     textAlign: align,
   );

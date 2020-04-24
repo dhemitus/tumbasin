@@ -1,17 +1,19 @@
 import 'dart:ui';
 
-const verypaleblue = Color(0xFBFDFF);
-const paleblue = Color(0x87CAFE);
+const third = Color(0xFF8162D9);
 
-const verypalered = Color(0xF67778);
-const likepalered = Color(0xED6B5A);
-const palered = Color(0xF15B5D);
+const secondarysecond = Color(0xFFFBFDFF);
+const secondary = Color(0xFF87CAFE);
 
-const orange = Color(0xF1885B);
+const primarythird = Color(0xFFF67778);
+const primarysecond = Color(0xFFF67778);
+const primary = Color(0xFFF15B5D);
 
-const verydarkgrey = Color(0x14181B);
-const darkgrey = Color(0x4E5356);
-const grey = Color(0x707585);
-const palegrey = Color(0x898B8C);
-const verypalegrey = Color(0xC7C7C9);
-const darkwhite = Color(0xF1F2F6);
+const orange = Color(0xFFF1885B);
+
+const verydarkgrey = Color(0xFF14181B);
+const darkgrey = Color(0xFF4E5356);
+const grey = Color(0xFF707585);
+const palegrey = Color(0xFF898B8C);
+const verypalegrey = Color(0xFFC7C7C9);
+const darkwhite = Color(0xFFF1F2F6);
