@@ -1,3 +1,14 @@
 export 'h1_atom.dart';
 export 'h2_atom.dart';
 export 'h3_atom.dart';
+export 'h5_atom.dart';
+export 'h6_atom.dart';
+export 'button1_atom.dart';
+export 'button2_atom.dart';
+export 'subtitle1_atom.dart';
+export 'subtitle2_atom.dart';
+export 'body1_atom.dart';
+export 'body2_atom.dart';
+export 'caption1_atom.dart';
+export 'caption2_atom.dart';
+export 'overline_atom.dart';
