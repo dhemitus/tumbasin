@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Subtitle1Text extends StatelessWidget {
   final String text;
   final TextAlign align;
-  Subtitle1Text({Key key,this.align, this.text}) : super(key: key);
+  final Color color;
+  Subtitle1Text(this.text, {Key key,this.align, this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Text(
     text,
     style: GoogleFonts.montserrat(
-      color: Colors.black,
-      fontSize: 12.0,
+      color: color == null ? Colors.black : color,
+      fontSize: ScreenUtil().setSp(12.0),
       fontStyle: FontStyle.normal,
-      letterSpacing: 0.2,
+      letterSpacing: ScreenUtil().setSp(0.2),
       fontWeight: FontWeight.w500,
-      height: 15.0,
+      height: ScreenUtil().setSp(15.0),
     ),
     textAlign: align,
   );

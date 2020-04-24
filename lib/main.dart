@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_playground_kodingworks/widgets/atoms/atoms.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
 
@@ -36,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, width: 360, height: 640, allowFontScaling: true);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -44,14 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-              style: GoogleFonts.montserrat()
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            Subtitle1Text('You have pushed the button this many times:'),
+            H5Text('$_counter')
           ],
         ),
       ),
