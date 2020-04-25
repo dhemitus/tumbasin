@@ -27,7 +27,7 @@ class CategoryButton extends StatelessWidget {
               fit: BoxFit.fitHeight,
             )
           ),
-          Button1Text(text, color: AppColor.grey,)
+          Body1Text(text, color: AppColor.grey,)
         ],
       ),
     );

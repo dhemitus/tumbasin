@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_playground_kodingworks/modules/banner/banner.dart';
+import 'package:flutter_playground_kodingworks/modules/categories/categories.dart';
+import 'package:flutter_playground_kodingworks/modules/products/products.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_playground_kodingworks/widgets/widgets.dart';
 import 'package:flutter_playground_kodingworks/shared/assets.dart' as AppAsset;
@@ -15,28 +19,35 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider<BannerBloc>(
+            create: (context) => BannerBloc(BannerRepository()),
+          ),
+          BlocProvider<CategoriesBloc>(
+            create: (context) => CategoriesBloc(CategoriesRepository()),
+          ),
+          BlocProvider<ProductsBloc>(
+            create: (context) => ProductsBloc(ProductsRepository()),
+          )
+        ],
+       child: MyHomePage(), 
+      )
+
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() async {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,18 +57,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            InputSearch(),
-            HeaderCard(),
-            MiniHeaderCard(),
-            CategoryButton(text: 'Sayuran', image: 'https://picsum.photos/250?image=9',),
+//            InputSearch(),
+//            HeaderCard(),
+//            MiniHeaderCard(),
+            CategoriesWidget(),
+            BannerWidget(),
             ItemTile()
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: (){},
         backgroundColor: AppColor.secondary,
-        tooltip: 'Increment',
+        tooltip: 'Keranjang',
         child: AppAsset.trolley,
       ),
       bottomNavigationBar: TabBottomCard(),

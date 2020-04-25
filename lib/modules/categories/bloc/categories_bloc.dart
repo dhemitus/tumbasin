@@ -7,7 +7,9 @@ part 'categories_event.dart';
 part 'categories_state.dart';
 
 class CategoriesBloc extends Bloc<CategoriesEvent, CategoriesState> {
-  CategoriesRepository _repo = CategoriesRepository();
+  CategoriesRepository _repo;
+
+  CategoriesBloc(this._repo);
 
   @override
   CategoriesState get initialState => CategoriesInitial();

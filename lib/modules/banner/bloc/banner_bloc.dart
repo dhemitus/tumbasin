@@ -7,14 +7,16 @@ part 'banner_event.dart';
 part 'banner_state.dart';
 
 class BannerBloc extends Bloc<BannerEvent, BannerState> {
-  BannerRepository _repo = BannerRepository();
+  final BannerRepository _repo;
 
+  BannerBloc(this._repo);
   @override
   BannerState get initialState => BannerInitial();
 
   @override
   Stream<BannerState> mapEventToState(BannerEvent event) async* {
     yield BannerLoading();
+    print('trigger banner');
 
     try {
       if(event is BannerSelectEvent) {

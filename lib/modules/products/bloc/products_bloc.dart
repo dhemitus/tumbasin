@@ -7,7 +7,9 @@ part 'products_event.dart';
 part 'products_state.dart';
 
 class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
-  ProductsRepository _repo = ProductsRepository();
+  final ProductsRepository _repo;
+
+  ProductsBloc(this._repo);
 
   @override
   ProductsState get initialState => ProductsInitial();
