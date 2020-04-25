@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             InputSearch(),
             HeaderCard(),
+            MiniHeaderCard(),
             CategoryButton(text: 'Sayuran', image: 'https://picsum.photos/250?image=9',),
             ItemTile()
           ],
