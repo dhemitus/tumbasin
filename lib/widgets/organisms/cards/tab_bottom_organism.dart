@@ -8,10 +8,10 @@ class TabBottomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 55.0.h,
+      height: 60.0.h,
       child: BottomAppBar(
         child: Padding(
-          padding: EdgeInsets.only(top: 10.0.h),
+          padding: EdgeInsets.only(top: 12.0.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: tabData.map((TabIcon item) => TabButton(icon: item.icon, text: item.text, color: item.text == 'Belanja' ? AppColor.primarysecond : AppColor.verypalegrey, onTap: () =>{},)).toList()
