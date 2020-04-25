@@ -5,6 +5,8 @@ class Product {
   int id;
   String name;
   String price;
+  String regular;
+  String sale;
   List<ImageSource> image;
   List<MetaData> data;
 
@@ -12,6 +14,8 @@ class Product {
     this.id, 
     this.name,
     this.price,
+    this.regular,
+    this.sale,
     this.image,
     this.data
   });
@@ -21,6 +25,8 @@ class Product {
     id = json['id'];
     name = json['name'];
     price = json['price'];
+    regular = json['regular_price'];
+    sale = json['sale_price'];
     image = (json['images'] as List).map((item) => ImageSource.fromJson(item)).toList();
     data = (json['meta_data'] as List).map((item) => MetaData.fromJson(item)).toList();
   }
@@ -30,6 +36,8 @@ class Product {
     _json['id'] = id;
     _json['name'] = name;
     _json['price'] = price;
+    _json['regular_price'] = regular;
+    _json['sale_price'] = sale;
 //    _json['image'][0] = image.toJson();
 //    _json['data'] = data.toJson();
     return _json;

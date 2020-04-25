@@ -15,7 +15,7 @@ class ImageCard extends StatelessWidget {
       width: 85.w,
       height: 80.h,
       image: image,
-      child: StikerDiscount(text: text,),
+      child: text == '' ? null : StikerDiscount(text: text,),
     );
   }
 }

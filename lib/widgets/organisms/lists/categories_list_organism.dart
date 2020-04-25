@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground_kodingworks/models/menu_category.dart';
 import 'package:flutter_playground_kodingworks/widgets/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_playground_kodingworks/shared/colors.dart' as AppColor;
 
 class CategoriesList extends StatelessWidget {
   final List<MenuCategory> categories;

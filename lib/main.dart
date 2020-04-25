@@ -54,15 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
     ScreenUtil.init(context, width: 360, height: 640, allowFontScaling: true);
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
           children: <Widget>[
 //            InputSearch(),
 //            HeaderCard(),
 //            MiniHeaderCard(),
             CategoriesWidget(),
             BannerWidget(),
-            ItemTile()
+            ProductsWiget()
+//            ItemTile()
           ],
         ),
       ),

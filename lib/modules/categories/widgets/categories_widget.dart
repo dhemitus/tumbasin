@@ -15,7 +15,8 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
     super.initState();
     BlocProvider.of<CategoriesBloc>(context).add(CategoriesSelectEvent());
   }
-    @override
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<CategoriesBloc, CategoriesState>(
       builder: (BuildContext context, CategoriesState state) {
