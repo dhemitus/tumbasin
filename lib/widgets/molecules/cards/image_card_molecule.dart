@@ -12,8 +12,8 @@ class ImageCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ImageContainer(
       radius: BorderRadius.circular(5.0.w),
-      width: 85,
-      height: 80,
+      width: 85.w,
+      height: 80.h,
       image: image,
       child: StikerDiscount(text: text,),
     );

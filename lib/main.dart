@@ -46,15 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            InputSearch(),
             HeaderCard(),
-            Subtitle1Text('You have pushed the button this many times:'),
-            H5Text('$_counter'),
-            TabButton(icon: AppAsset.home, text: 'Belanja', color: AppColor.primarysecond,),
-            SecondaryButton(text: 'Tambahkan',),
             CategoryButton(text: 'Sayuran', image: 'https://picsum.photos/250?image=9',),
-            LineContainer(),
-            StikerDiscount(text: 'Disc 10%',),
-            ImageCard(image: 'https://picsum.photos/250?image=9', text: 'Disc 15%',)
+            ItemTile()
           ],
         ),
       ),

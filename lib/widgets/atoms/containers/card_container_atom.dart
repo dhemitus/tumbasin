@@ -8,12 +8,14 @@ class CardContainer extends StatelessWidget {
   final double width;
   final double height;
   final List<BoxShadow> shadow;
+  final EdgeInsets padding;
 
-  CardContainer({this.width, this.height, this.child, this.color = Colors.white, this.radius, this.shadow});
+  CardContainer({this.width, this.height, this.child, this.color = Colors.white, this.radius, this.shadow, this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: padding,
       width: width != null ? width.w : null,
       height: height != null ? height.h : null,
       alignment: Alignment.center,
