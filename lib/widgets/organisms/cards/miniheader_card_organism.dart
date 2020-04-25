@@ -8,6 +8,7 @@ class MiniHeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardContainer(
+      height: 67.h,
       padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 15.0.h),
       radius: BorderRadius.only(
         bottomLeft: Radius.circular(5.0.w),
@@ -21,27 +22,34 @@ class MiniHeaderCard extends StatelessWidget {
             offset: Offset(0.0, 5.0)
         )
       ],
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
         children: <Widget>[
+          SizedBox(
+            height: 30.0.h,
+          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              AppAsset.market,
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10.0.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Subtitle2Text('Pasar Gunung Pati ', color: AppColor.verydarkgrey,),
-                    Body2Text('1,3Km dari locais anda', color: AppColor.palegrey,),
-                  ],
-                ),
+              Row(
+                children: <Widget>[
+                  AppAsset.market,
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0.w),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Subtitle2Text('Pasar Gunung Pati ', color: AppColor.verydarkgrey,),
+                        Body2Text('1,3Km dari locais anda', color: AppColor.palegrey,),
+                      ],
+                    ),
+                  ),
+                  AppAsset.down
+                ],
               ),
-              AppAsset.down
+              AppAsset.search,
             ],
           ),
-          AppAsset.search,
         ],
       ),
     );

@@ -45,7 +45,7 @@ class HeaderCard extends StatelessWidget {
             Row(
               children: <Widget>[
                 Body1Text('Lokasi Anda: ', color: AppColor.palegrey,),
-                Body2Text('Jalan Diponegoro, No 12 Kadipiro, Semarang', color: AppColor.palegrey,),
+                Body2Text('Jalan Diponegoro, No 12 Kadipiro...', color: AppColor.palegrey,),
               ],
             ),
 

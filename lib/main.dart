@@ -48,23 +48,47 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  ScrollController _scrollController = ScrollController();
+  bool _change = false;
+
+  _setOffset(double v) {
+    setState(() {
+      (v >= 90) ? _change = true : _change = false;
+    });
+  }
+
+  @override
+  void initState() {
+    _scrollController.addListener(() => _setOffset(_scrollController.offset));
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose(); // it is a good practice to dispose the controller
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 360, height: 640, allowFontScaling: true);
     return Scaffold(
-      body: Center(
-        child: ListView(
-          children: <Widget>[
-//            InputSearch(),
-//            HeaderCard(),
-//            MiniHeaderCard(),
-            CategoriesWidget(),
-            BannerWidget(),
-            ProductsWiget()
-//            ItemTile()
-          ],
-        ),
+      body: Stack(
+        children: <Widget>[
+          Center(
+            child: ListView(
+              controller: _scrollController,
+              children: <Widget>[
+                SizedBox(
+                  height: 176.0.h,
+                ),
+                CategoriesWidget(),
+                BannerWidget(),
+                ProductsWiget()
+              ],
+            ),
+          ),
+          TopCard(_change)
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
