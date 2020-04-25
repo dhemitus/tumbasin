@@ -13,7 +13,7 @@ class LineContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width != null ? width.w : null,
-      height: height.h,
+      height: height != null ? height.h : null,
       decoration: BoxDecoration(
         color: color,
         shape: BoxShape.rectangle,

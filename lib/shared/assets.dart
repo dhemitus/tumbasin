@@ -8,3 +8,4 @@ Widget user = SvgPicture.asset('assets/icon/user.svg', semanticsLabel: 'user',);
 Widget market = SvgPicture.asset('assets/icon/market.svg', semanticsLabel: 'market',);
 Widget search = SvgPicture.asset('assets/icon/search.svg', semanticsLabel: 'search',);
 Widget trolley = SvgPicture.asset('assets/icon/trolley.svg', semanticsLabel: 'trolley',);
+Widget down = SvgPicture.asset('assets/icon/down.svg', semanticsLabel: 'down',);

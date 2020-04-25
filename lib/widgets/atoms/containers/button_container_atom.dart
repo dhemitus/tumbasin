@@ -16,7 +16,7 @@ class ButtonContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width != null ? width.w : null,
-      height: height.h,
+      height: height != null ? height.h : null,
       alignment: Alignment.center,
       child: child,
       decoration: BoxDecoration(

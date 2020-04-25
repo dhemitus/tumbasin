@@ -64,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: AppAsset.trolley,
       ),
+      bottomNavigationBar: TabBottomCard(),
     );
   }
 }
