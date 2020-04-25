@@ -59,12 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
+    super.initState();
     _scrollController.addListener(() => _setOffset(_scrollController.offset));
   }
 
   @override
   void dispose() {
-    _scrollController.dispose(); // it is a good practice to dispose the controller
+    _scrollController.dispose();
     super.dispose();
   }
 
