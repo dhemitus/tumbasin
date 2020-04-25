@@ -28,31 +28,26 @@ class ItemTile extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      H6Text(product.name, color: AppColor.darkgrey,),
+                      H6Text('${product.name.substring(0, 14)}...', color: AppColor.darkgrey,),
                       Padding(
                         padding: EdgeInsets.only(top: 10.0.h, bottom: 10.0.h),
                         child: Caption1Text(priceFormat(double.parse(product.regular)), color: AppColor.verypalegrey,),
                       ),
                       Row(
                         children: <Widget>[
-                          Row(
-                            children: <Widget>[
                               Caption2Text(priceFormat(double.parse(product.price)) , color: AppColor.orange,),
                               OverlineText('/${product.data.first.value}', color: AppColor.verypalegrey,),
-                            ],
-                          ),
-                          SecondaryButton(text: 'Tambahkan',)
                         ]
                       ),
                     ],  
                   ),
                 ],
               ),
-/*              Container(
+              Container(
                 height: 85.0.h,
                 alignment: Alignment.bottomCenter,
                 child: SecondaryButton(text: 'Tambahkan',)
-              ),*/
+              ),
             ]
           ),
         ),
