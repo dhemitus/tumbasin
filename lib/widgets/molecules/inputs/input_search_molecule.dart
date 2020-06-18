@@ -10,9 +10,9 @@ class InputSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return CardContainer(
       padding: EdgeInsets.symmetric(horizontal: 10.0.w, vertical: 5.0.h),
-      height: 28.0.h,
+      height: 40.0.w,
       color: Colors.white,
-      radius: BorderRadius.circular(28.0.w),
+      radius: BorderRadius.circular(40.0.w),
       shadow: <BoxShadow> [
         BoxShadow(
             color: Colors.black.withOpacity(0.1),

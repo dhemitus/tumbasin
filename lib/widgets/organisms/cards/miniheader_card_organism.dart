@@ -8,7 +8,7 @@ class MiniHeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardContainer(
-      height: 67.h,
+      height: 85.w,
       padding: EdgeInsets.symmetric(horizontal: 15.0.w, vertical: 15.0.h),
       radius: BorderRadius.only(
         bottomLeft: Radius.circular(5.0.w),
@@ -25,7 +25,7 @@ class MiniHeaderCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SizedBox(
-            height: 30.0.h,
+            height: 30.0.w,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

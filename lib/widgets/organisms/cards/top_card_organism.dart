@@ -12,7 +12,7 @@ class TopCard extends StatelessWidget {
       return MiniHeaderCard();
     } else {
       return Container(
-        height: 187.h,
+        height: 195.h,
         child: Padding(
           padding: EdgeInsets.only(top: 33.0.h, left: 15.0.w, right: 15.0.w),
           child: Column(
